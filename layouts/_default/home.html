@@ -1,0 +1,10 @@
+{{$Products := index .Site.Data.takeshape.data.getProductList.items}}
+
+<h1>Products List:</h1>
+<ul>
+    {{ range $product := $Products }}
+        <li>
+            {{ $product.name }}: {{ $product.price }}
+        </li>
+    {{ end }}
+</ul>
